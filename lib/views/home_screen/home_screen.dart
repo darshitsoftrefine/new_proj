@@ -191,7 +191,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
     );
-  }
+  }//
 
   GestureDetector longCards(){
     return GestureDetector(
