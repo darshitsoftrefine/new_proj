@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key});
@@ -52,14 +51,17 @@ class DetailsScreen extends StatelessWidget {
           Get.back();
         },
         child: Container(
-            width: 50,
-            height: 70,
-            decoration: const BoxDecoration(
+          width: 50,
+          height: 60,
+          decoration: const BoxDecoration(
             color: Colors.red,
+          ),
+          child: const Padding(
+            padding: EdgeInsets.only(bottom: 18.0),
+            child: Center(
+              child: Text("Zuruck", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
             ),
-          child:  const Center(
-            child: Text("Zuruck", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
-        )
+          ),
         ),
       )
     );
