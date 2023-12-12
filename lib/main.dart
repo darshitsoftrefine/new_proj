@@ -1,3 +1,4 @@
+import 'package:bavaris/views/home_screen/home_screen.dart';
 import 'package:bavaris/views/splash_screen/splash_screen.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,9 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark
       ),
       themeMode: ThemeMode.light,
-      home: const SplashScreen()
+      home: HomeScreen()
     );
   }
 }
+
+
