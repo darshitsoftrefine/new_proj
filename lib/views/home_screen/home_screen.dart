@@ -13,6 +13,8 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
 
+
+
   List<Widget> dragCard = [
     CustomWidgets().rowCard(),
     CustomWidgets().rowCard1(),
@@ -34,8 +36,8 @@ class _HomeScreenState extends State<HomeScreen> {
           width: MediaQuery.of(context).size.width / 2,
           height: MediaQuery.of(context).size.width / 2,),
       ),
-      body: Padding(padding: const EdgeInsets.all(18.0),
-        child: SingleChildScrollView(
+      body: SafeArea(
+        child: Padding(padding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 20.0),
           child: ReorderableWrap(
             children: dragCard,
             onReorder: (oldIndex, newIndex) {
@@ -45,8 +47,8 @@ class _HomeScreenState extends State<HomeScreen> {
               });
             },
           ),
-        ),
-        ),
+          ),
+      ),
       bottomNavigationBar: bottomBar(),
     );
   }
