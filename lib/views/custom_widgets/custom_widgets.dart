@@ -21,7 +21,6 @@ class CustomWidgets{
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           GestureDetector(
             onTap: (){
@@ -29,136 +28,71 @@ class CustomWidgets{
                 transition: Transition.downToUp,
               );
             },
-            child: Flex(
-              direction: Axis.horizontal,
-              children: [
-                SizedBox(
-                  child: Card(
-                    elevation: 0.0,
-                    shape: const RoundedRectangleBorder(
-                        side: BorderSide.none
-                    ),
-                    color: Colors.white,
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 8.0, right: 5, left: 5),
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(right: 4.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text("Auftragseingang", style: TextStyle(color: Color(0xFFE20F00), fontWeight: FontWeight.w900, fontSize: 18),),
-                                Text("Heute vs. Vorjahrestag", style: TextStyle(color: Colors.grey[700], fontSize: 10.0),)
-                              ],
-                            ),
+            child: Flexible(
+              child: SizedBox(
+                child: Card(
+                  elevation: 0.0,
+                  shape: const RoundedRectangleBorder(
+                      side: BorderSide.none
+                  ),
+                  color: Colors.white,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 12.0, right: 8, left: 8, bottom: 8),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 4.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text("Auftragseingang", style: TextStyle(color: Color(0xFFE20F00), fontWeight: FontWeight.w900, fontSize: 18, height: 0.0),),
+                              Text("Heute vs. Vorjahrestag", style: TextStyle(color: Colors.grey[700], fontSize: 10.0, height: 0.0),)
+                            ],
                           ),
-                          //const SizedBox(height: 10 ,),
-                          const Padding(
-                            padding: EdgeInsets.only(right: 8.0),
-                            child: Align(
-                                alignment: Alignment.bottomRight,
-                                child: Text("61.912 \u{20AC}", style: TextStyle(fontWeight: FontWeight.w500, color: Color(0xFF1B2031), fontSize: 30),)),
-                          ),
-                          //const SizedBox(height: 5,),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 5.0),
-                            child: Align(
-                                alignment: Alignment.bottomRight,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children: [
-                                    const Text("42.749", style: TextStyle(height: 0,color: Color(0xFF878787), fontSize: 24),),
-                                    const SizedBox(width: 5,),
-                                    Column(
-                                      children: [
-                                        CustomPaint(
-                                          painter: TrianglePainter(
-                                            color: Colors.green, // triangle color
-                                            direction: 'top', // triangle direction
-                                          ),
-                                          size: const Size(13, 12), // triangle size
+                        ),
+                        //const SizedBox(height: 10 ,),
+                        const Padding(
+                          padding: EdgeInsets.only(right: 2.0, left: 15.0),
+                          child: Align(
+                              alignment: Alignment.bottomRight,
+                              child: Text("61.912 \u{20AC}", style: TextStyle(fontWeight: FontWeight.w500, color: Color(0xFF1B2031), fontSize: 30),)),
+                        ),
+                        //const SizedBox(height: 5,),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 5.0, left: 40),
+                          child: Align(
+                              alignment: Alignment.bottomRight,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  const Text("42.749", style: TextStyle(height: 0,color: Color(0xFF878787), fontSize: 24),),
+                                  const SizedBox(width: 5,),
+                                  Column(
+                                    children: [
+                                      CustomPaint(
+                                        painter: TrianglePainter(
+                                          color: Colors.green, // triangle color
+                                          direction: 'top', // triangle direction
                                         ),
-                                        const SizedBox(height: 4,),
-                                        const Text("+ 9.02", style: TextStyle(fontSize: 8),)
-                                      ],
-                                    ),
-                                  ],
-                                )),
-                          )
-                        ],
-                      ),
+                                        size: const Size(13, 12), // triangle size
+                                      ),
+                                      const SizedBox(height: 4,),
+                                      const Text("+ 9.02", style: TextStyle(fontSize: 8),)
+                                    ],
+                                  ),
+                                ],
+                              )),
+                        )
+                      ],
                     ),
                   ),
                 ),
-              ],
+              ),
             ),
           ),
           const SizedBox(width: 10,),
-    //       GestureDetector(
-    //       onTap: (){
-    //       Get.to(const DetailsScreen(),
-    //       transition: Transition.downToUp,
-    //       );
-    //       },
-    //       child: SizedBox(
-    //       height: 138,
-    //       width: 184,
-    //       child: Card(
-    //       elevation: 0.0,
-    //       shape: const RoundedRectangleBorder(
-    //       side: BorderSide.none
-    //       ),
-    //       color: Colors.white,
-    //       child: Padding(
-    //       padding: const EdgeInsets.only(top: 8.0, right: 10),
-    //       child: Column(
-    //       children: [
-    //       Padding(
-          //       padding: const EdgeInsets.only(right: 24.0),
-          // child: Column(
-          // mainAxisAlignment: MainAxisAlignment.start,
-          // crossAxisAlignment: CrossAxisAlignment.start,
-          // children: [
-          // const Text("Umsatz", style: TextStyle(color: Color(0xFFE20F00), fontWeight: FontWeight.w900, fontSize: 18),),
-          // Text("Heute vs. Vorjahrestag", style: TextStyle(color: Colors.grey[700], fontSize: 10.0),)
-          // ],
-        // ),
-        // ),
-        // //const SizedBox(height: 10 ,),
-        // const Align(
-        // alignment: Alignment.bottomRight,
-        // child: Text("49.528 \u{20AC}", style: TextStyle(fontWeight: FontWeight.w500, color: Color(0xFF1B2031), fontSize: 30),)),
-        // //const SizedBox(height: 5,),
-        // Align(
-        // alignment: Alignment.bottomRight,
-        // child: Row(
-        // mainAxisAlignment: MainAxisAlignment.end,
-        // children: [
-        // const Text("54.729", style: TextStyle(color: Color(0xFF878787), fontSize: 24),),
-        // const SizedBox(width: 5,),
-        // Column(
-        // children: [
-        // CustomPaint(
-        // painter: TrianglePainter(
-        // color: Colors.red, // triangle color
-        // direction: 'bottom', // triangle direction
-        // ),
-        // size: const Size(13, 12), // triangle size
-        // ),
-        // const SizedBox(height: 4,),
-        // const Text("+ 9.02", style: TextStyle(fontSize: 8),)
-    // ],
-          // ),
-          // ],
-          // ))
-          // ],
-          // ),
-          // ),
-          // ),
-          // ),
-          // ),
+          const SizedBox(height: 10,),
         ],
       ),
     );
@@ -167,8 +101,7 @@ class CustomWidgets{
   SingleChildScrollView rowCard1(){
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: Column(
         children: [
           GestureDetector(
             onTap: (){
@@ -176,38 +109,41 @@ class CustomWidgets{
                 transition: Transition.downToUp,
               );
             },
-            child: Flex(
-              direction: Axis.horizontal,
-              children: [
-                SizedBox(
-                  child: Card(
-                    elevation: 0.0,
-                    shape: const RoundedRectangleBorder(
-                        side: BorderSide.none
-                    ),
-                    color: Colors.white,
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 8.0, right: 5, left: 10),
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(right: 24.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text("Umsatz", style: TextStyle(color: Color(0xFFE20F00), fontWeight: FontWeight.w900, fontSize: 18),),
-                                Text("Heute vs. Vorjahrestag", style: TextStyle(color: Colors.grey[700], fontSize: 10.0),)
-                              ],
-                            ),
+            child: Flexible(
+              child: SizedBox(
+                child: Card(
+                  elevation: 0.0,
+                  shape: const RoundedRectangleBorder(
+                      side: BorderSide.none
+                  ),
+                  color: Colors.white,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 12.0, right: 10, left: 10, bottom: 8),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 24.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text("Umsatz", style: TextStyle(color: Color(0xFFE20F00), fontWeight: FontWeight.w900, fontSize: 18, height: 0.0),),
+                              Text("Heute vs. Vorjahrestag", style: TextStyle(color: Colors.grey[700], fontSize: 10.0, height: 0.0),)
+                            ],
                           ),
-                          //const SizedBox(height: 10 ,),
-                          const Align(
+                        ),
+                        //const SizedBox(height: 10 ,),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 13.0),
+                          child: Align(
                               alignment: Alignment.bottomRight,
                               child: Text("49.528 \u{20AC}", style: TextStyle(fontWeight: FontWeight.w500, color: Color(0xFF1B2031), fontSize: 30),)),
-                          //const SizedBox(height: 5,),
-                          Align(
-                              alignment: Alignment.bottomRight,
+                        ),
+                        //const SizedBox(height: 5,),
+                        Align(
+                            alignment: Alignment.bottomRight,
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 39.0),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
@@ -227,16 +163,15 @@ class CustomWidgets{
                                     ],
                                   ),
                                 ],
-                              ))
-                        ],
-                      ),
+                              ),
+                            ))
+                      ],
                     ),
                   ),
                 ),
-              ],
+              ),
             ),
           ),
-          const SizedBox(width: 10,),
           const SizedBox(height: 10,),
         ],
       ),
@@ -254,148 +189,51 @@ class CustomWidgets{
                   transition: Transition.downToUp
               );
             },
-            child: Flex(
-              direction: Axis.horizontal,
-              children: [
-                SizedBox(
-                  child: Card(
-                    elevation: 0.0,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)
-                    ),
-                    color: Colors.white,
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 8.0, left: 15, right: 5, bottom: 0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text("Abwesenheit", style: TextStyle(color: Color(0xFFE20F00), fontWeight: FontWeight.w700),),
-                          Text("Heute", style: TextStyle(color: Colors.grey[700], fontSize: 8.0, height: 0),),
-                          const Padding(
-                            padding: EdgeInsets.only(left: 5.0,),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Text("3", style: TextStyle(fontSize: 60, color: Color(0xFF1B2031), fontWeight: FontWeight.bold, height: 0),),
-                                    Text("Krank", style: TextStyle(color: Color(0xFF878787), fontSize: 8),)
-                                  ],
-                                ),
-                                SizedBox(width: 30,),
-                                Column(
-                                  children: [
-                                    Text("12", style: TextStyle(fontSize: 60, color: Color(0xFF1B2031), fontWeight: FontWeight.bold, height: 0),),
-                                    Text("Urlaub", style: TextStyle(color: Color(0xFF878787), fontSize: 8),)
-                                  ],
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
+            child: Flexible(
+              child: SizedBox(
+                child: Card(
+                  elevation: 0.0,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)
+                  ),
+                  color: Colors.white,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 15.0, left: 15, right: 15, bottom: 5),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text("Abwesenheit", style: TextStyle(color: Color(0xFFE20F00), fontWeight: FontWeight.w700, height: 0.0),),
+                        Text("Heute", style: TextStyle(color: Colors.grey[700], fontSize: 8.0, height: 0),),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 5.0,),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text("3", style: TextStyle(fontSize: 60, color: Color(0xFF1B2031), fontWeight: FontWeight.bold, height: 0),),
+                                  Text("Krank", style: TextStyle(color: Color(0xFF878787), fontSize: 8, height: 0.0),)
+                                ],
+                              ),
+                              SizedBox(width: 30,),
+                              Column(
+                                children: [
+                                  Text("12", style: TextStyle(fontSize: 60, color: Color(0xFF1B2031), fontWeight: FontWeight.bold, height: 0),),
+                                  Text("Urlaub", style: TextStyle(color: Color(0xFF878787), fontSize: 8, height: 0.0),)
+                                ],
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 ),
-              ],
+              ),
             ),
           ),
           const SizedBox(width: 10,),
-        //       GestureDetector(
-        //       onTap: (){
-        //       Get.to(const DetailsScreen(),
-        //       transition: Transition.downToUp
-            //       );
-            //       },
-            //       child: SizedBox(
-            //       height: 138,
-            //       width: 184,
-            //       child: Card(
-            //       elevation: 0.0,
-            //       shape: RoundedRectangleBorder(
-            //       borderRadius: BorderRadius.circular(10)
-            //       ),
-            //       color: Colors.white,
-            //       child: Stack(
-            //       children: [
-    //       Padding(
-          //       padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 8.0, bottom: 16),
-          // child: SizedBox(
-          // height: 100,
-          // child: Column(
-          // children: [
-          // const Text("Top Artikel", style: TextStyle(color: Color(0xFFE20F00), fontWeight: FontWeight.bold, fontSize: 12),),
-          // Text("Heute", style: TextStyle(color: Colors.grey[700], fontSize: 8.0),),
-          // ],
-          // ),
-          // ),
-          // ),
-          // SfCircularChart(
-          // legend: const Legend(
-            // padding: 10,
-            // itemPadding: 3.0,
-            // isVisible: true,
-            // textStyle: TextStyle(fontSize: 8),
-            // iconHeight: 5,
-            // iconWidth: 5,
-            // // Legend will be placed at the left
-            // position: LegendPosition.left
-            // ),
-            // title: ChartTitle(
-            // alignment: ChartAlignment.near,
-            // text: "_",
-            // textStyle: const TextStyle(fontSize: 12, color: Colors.white)
-            // ),
-            // series: <CircularSeries>[
-            // // Render pie chart
-            // DoughnutSeries<ChartData, String>(
-            // dataSource: chartData,
-            // xValueMapper: (ChartData data, _) => data.month,
-            // yValueMapper: (ChartData data, _) => data.sales,
-            // legendIconType: LegendIconType.circle,
-            // innerRadius: '70%',
-            // explode: true,
-            // // Explode all the segments
-            // explodeAll: true,
-            // pointColorMapper: (ChartData data, _) => data.color,
-            // //dataLabelSettings: DataLabelSettings(isVisible: true),
-            // )
-        // ],
-        // //legend: Legend(isVisible: true),
-        // ),
-        // const Padding(
-        // padding: EdgeInsets.only(right: 40.0, top: 40),
-        // child: Align(
-        // alignment: Alignment.bottomRight,
-        // child: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
-        // crossAxisAlignment: CrossAxisAlignment.center,
-            // children: [
-            // Text(
-            // 'AuftragScan',
-            // style: TextStyle(
-            // fontSize: 4,
-            // color: Colors.black,
-            // ),
-            // ),
-            // Text(
-            // '101.977,50 \u{20AC}',
-            // style: TextStyle(
-            // fontSize: 4,
-            // color: Colors.black,
-            // ),
-            // ),
-            // ],
-            // ),
-            // ),
-            // ),
-            // ],
-            // )
-            // //Image.asset("assets/images/pie_chart.png", width: double.infinity, height: double.infinity,),
-            // ),
-            // ),
-            // ),
         ],
       ),
     );
@@ -414,84 +252,98 @@ class CustomWidgets{
             },
             child: Column(
               children: [
-                SizedBox(
-                  height: 138,
-                  width: 180,
-                  child: Card(
-                      elevation: 0.0,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)
-                      ),
-                      color: Colors.white,
-                      child: Stack(
+                Card(
+                    elevation: 0.0,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)
+                    ),
+                    color: Colors.white,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 5.0),
+                      child: Column(
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 8.0, bottom: 16),
-                            child: Column(
-                              children: [
-                                const Text("Top Artikel", style: TextStyle(color: Color(0xFFE20F00), fontWeight: FontWeight.bold, fontSize: 12),),
-                                Text("Heute", style: TextStyle(color: Colors.grey[700], fontSize: 8.0),),
+                          SizedBox(
+                            height: 50,
+                            width: 150,
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 8.0, bottom: 1),
+                              child: Align(
+                                alignment: Alignment.topLeft,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text("Top Artikel", style: TextStyle(color: Color(0xFFE20F00), fontWeight: FontWeight.bold, fontSize: 15, height: 0.0),),
+                                    Text("Heute", style: TextStyle(color: Colors.grey[700], fontSize: 8.0, height: 0.0),),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 80,
+                            width: 170,
+                            child: SfCircularChart(
+                              annotations: <CircularChartAnnotation>[
+                                CircularChartAnnotation(
+                                    widget: const Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          'AuftragScan',
+                                          style: TextStyle(
+                                            fontSize: 4,
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                        Text(
+                                          '101.977,50 \u{20AC}',
+                                          style: TextStyle(
+                                            fontSize: 4,
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                      ],
+                                    ),)
+                              ],
+                              legend: const Legend(
+                                  padding: 10,
+                                  itemPadding: 3.0,
+                                  isVisible: true,
+                                  textStyle: TextStyle(fontSize: 8),
+                                  iconHeight: 5,
+                                  iconWidth: 5,
+                                  // Legend will be placed at the left
+                                  position: LegendPosition.left
+                              ),
+                              // title: ChartTitle(
+                              //     alignment: ChartAlignment.far,
+                              //     text: "_",
+                              //     textStyle: const TextStyle(fontSize: 12, color: Colors.white)
+                              // ),
+
+                              series: <CircularSeries>[
+                                // Render pie chart
+                                DoughnutSeries<ChartData, String>(
+                                  dataSource: chartData,
+                                  xValueMapper: (ChartData data, _) => data.month,
+                                  yValueMapper: (ChartData data, _) => data.sales,
+                                  pointColorMapper: (ChartData data, _) => data.color,
+                                  legendIconType: LegendIconType.circle,
+                                  radius: '120%',
+                                  innerRadius: '60%',
+                                    explode: true,
+                                  explodeIndex: null,
+                                  explodeOffset: "1.9%",
+                                  explodeAll: true
+                                  //dataLabelSettings: DataLabelSettings(isVisible: true),
+                                )
                               ],
                             ),
                           ),
-                          SfCircularChart(
-                            annotations: <CircularChartAnnotation>[
-                              CircularChartAnnotation(
-                                  widget: const Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        'AuftragScan',
-                                        style: TextStyle(
-                                          fontSize: 4,
-                                          color: Colors.black,
-                                        ),
-                                      ),
-                                      Text(
-                                        '101.977,50 \u{20AC}',
-                                        style: TextStyle(
-                                          fontSize: 4,
-                                          color: Colors.black,
-                                        ),
-                                      ),
-                                    ],
-                                  ),)
-                            ],
-                            legend: const Legend(
-                                padding: 10,
-                                itemPadding: 3.0,
-                                isVisible: true,
-                                textStyle: TextStyle(fontSize: 8),
-                                iconHeight: 5,
-                                iconWidth: 5,
-                                // Legend will be placed at the left
-                                position: LegendPosition.left
-                            ),
-                            title: ChartTitle(
-                                alignment: ChartAlignment.near,
-                                text: "_",
-                                textStyle: const TextStyle(fontSize: 12, color: Colors.white)
-                            ),
-                            series: <CircularSeries>[
-                              // Render pie chart
-                              DoughnutSeries<ChartData, String>(
-                                dataSource: chartData,
-                                xValueMapper: (ChartData data, _) => data.month,
-                                yValueMapper: (ChartData data, _) => data.sales,
-                                pointColorMapper: (ChartData data, _) => data.color,
-                                legendIconType: LegendIconType.circle,
-                                radius: '120%',
-                                innerRadius: '60%',
-                                explode: true,
-                                explodeAll: true
-                                //dataLabelSettings: DataLabelSettings(isVisible: true),
-                              )
-                            ],
-                          ),
                         ],
-                      )
-                  ),
+                      ),
+                    )
                 ),
               ],
             ),
@@ -502,84 +354,94 @@ class CustomWidgets{
     );
   }
 
-  Flex barChartCard(String? text){
-    return Flex(
-      direction: Axis.vertical,
-      children: [
-        SizedBox(
-          height: 138,
-          width: 373,
-          child: Card(
-            shape: const RoundedRectangleBorder(
-            ),
-            color: Colors.white,
-            child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: GestureDetector(
-                  onTap: (){
-                    Get.to(const DetailsScreen(),
-                        transition: Transition.downToUp
-                    );
-                  },
-                  child: Stack(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 8.0, bottom: 16),
-                        child: SizedBox(
-                          height: 100,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text("Sales Pipeline", style: TextStyle(color: Color(0xFFE20F00), fontWeight: FontWeight.bold, fontSize: 12),),
-                              Text("Gewichteter Umsatz je Sales-Phase", style: TextStyle(color: Colors.grey[700], fontSize: 8.0),),
-                            ],
+  SingleChildScrollView barChartCard(String? text){
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Column(
+        children: [
+          GestureDetector(
+            onTap: (){
+              Get.to(const DetailsScreen(),
+                  transition: Transition.downToUp
+              );
+            },
+            child: Flexible(
+              child: SizedBox(
+                child: Card(
+                  elevation: 0.0,
+                  shape: const RoundedRectangleBorder(
+                  ),
+                  color: Colors.white,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 8.0, bottom: 0),
+                          child: SizedBox(
+                            height: 33,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text("Sales Pipeline", style: TextStyle(color: Color(0xFFE20F00), fontWeight: FontWeight.bold, fontSize: 18, height: 0.0),),
+                                Text("Gewichteter Umsatz je Sales-Phase", style: TextStyle(color: Colors.grey[700], fontSize: 8.0, height: 0),),
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                      SfCartesianChart(
-                        plotAreaBorderWidth: 0.0,
-                        title: ChartTitle(
-                            alignment: ChartAlignment.near,
-                            text: "",
-                            textStyle: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)
-                        ),
-                        series: <ChartSeries<ChartData, String>> [
-                          ColumnSeries<ChartData, String>(
-                            color: const Color(0xFFE20F00),
-                            name: 'Sales',
-                            dataSource: [
-                              ChartData('Leads', 'Hello', 58, null),
-                              ChartData('Kontakt','Hello', 25, null),
-                              ChartData('Präsentation','Hello', 10, null),
-                              ChartData('Angebot','Hello', 20, null),
-                              ChartData('Nachfass','Hello', 50, null),
-                              ChartData("Abgeschlossen",'Hello', 30, null)
+                        SizedBox(
+                          height: 88,
+                          width: 350,
+                          child: SfCartesianChart(
+                            plotAreaBorderWidth: 0.0,
+                            // title: ChartTitle(
+                            //     alignment: ChartAlignment.near,
+                            //     text: "Sales Pipeline",
+                            //     textStyle: const TextStyle(color: Colors.red, fontWeight: FontWeight.bold)
+                            // ),
+                            series: <ChartSeries<ChartData, String>> [
+                              ColumnSeries<ChartData, String>(
+                                color: const Color(0xFFE20F00),
+                                name: 'Sales',
+                                dataSource: [
+                                  ChartData('Leads', 'Hello', 58, null),
+                                  ChartData('Kontakt','Hello', 25, null),
+                                  ChartData('Präsentation','Hello', 10, null),
+                                  ChartData('Angebot','Hello', 20, null),
+                                  ChartData('Nachfass','Hello', 50, null),
+                                  ChartData("Abgeschlossen",'Hello', 30, null)
+                                ],
+                                xValueMapper: (ChartData data, _) => data.month,
+                                yValueMapper: (ChartData data, _) => data.sales,
+                              )
                             ],
-                            xValueMapper: (ChartData data, _) => data.month,
-                            yValueMapper: (ChartData data, _) => data.sales,
-                          )
-                        ],
-                        primaryXAxis: CategoryAxis(
-                            labelStyle: const TextStyle(fontSize: 8),
-                            majorGridLines: const MajorGridLines(width: 0),
-                          axisLine: const AxisLine(color: Colors.white),
-                          majorTickLines: const MajorTickLines(color: Colors.white)
+                            primaryXAxis: CategoryAxis(
+                                labelStyle: const TextStyle(fontSize: 8),
+                                majorGridLines: const MajorGridLines(width: 0),
+                              axisLine: const AxisLine(color: Colors.grey),
+                              majorTickLines: const MajorTickLines(color: Colors.white)
+                            ),
+                            primaryYAxis: NumericAxis(
+                                majorGridLines: const MajorGridLines(width: 0),
+                                isVisible: false
+                            ),
+                            tooltipBehavior: TooltipBehavior(enable: true),
+                          ),
                         ),
-                        primaryYAxis: NumericAxis(
-                            majorGridLines: const MajorGridLines(width: 0),
-                            isVisible: false
-                        ),
-                        tooltipBehavior: TooltipBehavior(enable: true),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                )
+                ),
+              ),
             ),
           ),
-        ),
-        const SizedBox(height: 10,),
-      ],
+          const SizedBox(height: 10,),
+          const SizedBox(width: 10,),
+        ],
+      ),
     );
+
   }
 
   GestureDetector longCards(){
@@ -589,23 +451,70 @@ class CustomWidgets{
             transition: Transition.downToUp
         );
       },
-      child: Flex(
-        direction: Axis.vertical,
-        children: [
-          SizedBox(
-            height: 150,
-            width: 375,
-            child: Card(
-              elevation: 0.0,
-              shape: const RoundedRectangleBorder(
-
-              ),
-              color: Colors.white,
-              child: Image.asset("assets/images/chart.png", width: double.infinity, height: double.infinity,),
+      child: Flexible(
+        child: SizedBox(
+          width: 375,
+          child: Card(
+            elevation: 0.0,
+            shape: RoundedRectangleBorder(
             ),
+            color: Colors.white,
+            child: Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Row(
+                children: [
+                  Stack(
+                    children: [
+                      SizedBox(
+                        width: 80,
+                        height: 80,
+                        child: CircleAvatar(
+                          backgroundColor: Color(0xFFE20F00),
+                        ),
+                      ),
+                      Positioned(
+                        top: 12,
+                        right: 20,
+                        left: 18,
+                        child: SizedBox(
+                          width: 15,
+                          height: 10,
+                          child: CircleAvatar(
+                            backgroundColor: Colors.white,
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        top: 15,
+                        right: 15,
+                        left: 25,
+                        child: Text("S", style: TextStyle(fontSize: 40, color: Colors.white),),
+                      ),
+                    ],
+                  ),
+                 Positioned(
+                   bottom: 120,
+                   child: Column(
+                     crossAxisAlignment: CrossAxisAlignment.start,
+                     children: [
+                       Row(
+                         children: [
+                           Icon(Icons.home),
+                           Text("Holstein GiroBusiness M", style: TextStyle(fontSize: 18),)
+                         ],
+                       ),
+                       Text("DE 78 2135 2240 0189 9044 77", style: TextStyle(color: Colors.grey[500]),),
+                       Text("66.747,14 \u{20AC}", style: TextStyle(color: Color(0xFFE20F00), fontSize: 20),),
+                       Text("")
+                     ],
+                   ),
+                 )
+              ]
+                  ),
+              ),
+            )
           ),
-        ],
-      ),
+        ),
     );
   }
   }

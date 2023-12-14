@@ -13,8 +13,6 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
 
-
-
   List<Widget> dragCard = [
     CustomWidgets().rowCard(),
     CustomWidgets().rowCard1(),
@@ -37,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
           height: MediaQuery.of(context).size.width / 2,),
       ),
       body: SafeArea(
-        child: Padding(padding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 20.0),
+        child: Padding(padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 15.0),
           child: ReorderableWrap(
             children: dragCard,
             onReorder: (oldIndex, newIndex) {

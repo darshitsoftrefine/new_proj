@@ -1,13 +1,11 @@
 import 'package:bavaris/views/home_screen/home_screen.dart';
 import 'package:bavaris/views/splash_screen/splash_screen.dart';
-import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
-  runApp(DevicePreview(
-    builder: (context) => const MyApp(), // Wrap your app
-  ),);
+  runApp(const MyApp(), // Wrap your app
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -32,5 +30,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 

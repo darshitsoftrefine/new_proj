@@ -25,7 +25,9 @@ class CustomTheme {
 
 class CustomColor {
   static const mainColor = Color(0xFFE20F00); //red
-  static const secondaryColor = Color(0xFF878787); //grey
+  static const secondaryColor = Color(0xFF878787);
+  static const textColor = Colors.black;
+  //grey
   // static const authButtonColor = Color(0xFF13B58C);
   // static const customBlack = Color(0xFF4F4F4F);
   // static const productTextBlack = Color(0xFF4A4A4A);

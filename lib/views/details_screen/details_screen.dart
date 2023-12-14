@@ -11,7 +11,7 @@ class DetailsScreen extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         toolbarHeight: 100.0,
-        backgroundColor: Colors.red,
+        backgroundColor: const Color(0xFFE20F00),
         centerTitle: true,
         title: Image.asset("assets/images/splashText.png",
           width: MediaQuery.of(context).size.width / 2,
@@ -19,7 +19,7 @@ class DetailsScreen extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(left: 15, right: 5, top: 25, bottom: 15),
+          padding: const EdgeInsets.only(left: 15, right: 15, top: 25, bottom: 15),
           child: SingleChildScrollView(
             child: Column(
               //crossAxisAlignment: CrossAxisAlignment.center,
@@ -54,10 +54,10 @@ class DetailsScreen extends StatelessWidget {
           width: 50,
           height: 60,
           decoration: const BoxDecoration(
-            color: Colors.red,
+            color: Color(0xFFE20F00),
           ),
           child: const Padding(
-            padding: EdgeInsets.only(bottom: 18.0),
+            padding: EdgeInsets.only(bottom: 18.0, top: 5),
             child: Center(
               child: Text("Zuruck", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
             ),
