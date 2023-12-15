@@ -3,5 +3,5 @@ class ChartData {
   final String month;
   final String subtitle;
   final double sales;
-  final dynamic? color;
+  final dynamic color;
 }

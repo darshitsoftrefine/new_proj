@@ -6,7 +6,7 @@ class CustomTheme {
         inputDecorationTheme: InputDecorationTheme(
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(30),
-              borderSide: BorderSide(color: CustomColor.secondaryColor),
+              borderSide: const BorderSide(color: CustomColor.secondaryColor),
             ),
         //     hintStyle: GoogleFonts.montserrat(color: CustomColor.secondaryColor, fontWeight: FontWeight.w400, fontSize: 18)),
         // textTheme: TextTheme(

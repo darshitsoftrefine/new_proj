@@ -4,22 +4,22 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:reorderables/reorderables.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class DashboardScreen extends StatefulWidget {
+  const DashboardScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<DashboardScreen> createState() => _DashboardScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _DashboardScreenState extends State<DashboardScreen> {
 
   List<Widget> dragCard = [
     CustomWidgets().rowCard(),
     CustomWidgets().rowCard1(),
     CustomWidgets().barChartCard('Sales Pipeline'),
     CustomWidgets().circularCard(),
-    CustomWidgets().circularCard1(),
-    CustomWidgets().longCards()
+    CustomWidgets().pieChartCard(),
+    CustomWidgets().longCards(),
   ];
 
   @override
@@ -27,6 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.blueGrey[600],
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         toolbarHeight: 100.0,
         backgroundColor: const Color(0xFFE20F00),
         centerTitle: true,
@@ -35,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
           height: MediaQuery.of(context).size.width / 2,),
       ),
       body: SafeArea(
-        child: Padding(padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 15.0),
+        child: Padding(padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
           child: ReorderableWrap(
             children: dragCard,
             onReorder: (oldIndex, newIndex) {
@@ -82,17 +83,17 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   ),
                   CupertinoActionSheetAction(onPressed: (){
-                    //Get.to(DiesePage());
+                    //Get.to(const DieseWochePage());
                   }, child:
                   const Text("Diese Woche", style: TextStyle(fontSize: 16, color: Colors.black),),),
 
                   CupertinoActionSheetAction(onPressed: (){
-                    //Get.to(DieserPage());
+                    //Get.to(const DieserMonatPage());
                   }, child:
                   const Text("Dieser Monat", style: TextStyle(fontSize: 16, color: Colors.black),),),
 
                   CupertinoActionSheetAction(onPressed: (){
-                    //Get.to(DieserJahrPage());
+                    //Get.to(const DieserJahrPage());
                   }, child:
                   const Text("Dieser Jahr", style: TextStyle(fontSize: 16, color: Colors.black),),),
 
