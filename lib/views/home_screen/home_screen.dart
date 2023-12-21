@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Image.asset("assets/images/splashText.png",
           width: MediaQuery.of(context).size.width / 2,
           height: MediaQuery.of(context).size.width / 2,),
-      ),
+      ),//
       body: SafeArea(
         child: Padding(padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
           child: ReorderableWrap(
